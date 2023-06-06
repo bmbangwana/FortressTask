@@ -1,0 +1,32 @@
+
+#  Tested locally on machine using NodePort
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: ftp-service
+spec:
+  type: NodePort
+  ports:
+  - name: ftp
+    port: 21
+    targetPort: 21
+    nodePort: 30021
+  selector:
+    app: ftp-server
+
+
+# Or use Loadbalancer Service type if running on Cloud Provider
+
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: ftp-service
+# spec:
+#   type: LoadBalancer
+#   ports:
+#   - name: ftp
+#     port: 21
+#     targetPort: 21
+#   selector:
+#     app: ftp-server
