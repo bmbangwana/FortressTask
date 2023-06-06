@@ -1,4 +1,4 @@
-Welcome to THIS TEST FTP Server setup using docker image
+# Welcome to THIS TEST FTP Server setup using docker image
 
 This task accomplishes the following 
 
@@ -11,4 +11,4 @@ above.
 A plus would be to:
 4. Log in to the passive FTP session as user “admin”, password “admin”.
  To accomplish step 4, the password "admin" can be set when running the container using this command 
- # docker run -e FTP_PASSWORD=admin -p 21:21 -p 21100-21110:21100-21110 ftp-server:latest
+ - docker run -e FTP_PASSWORD=admin -p 21:21 -p 21100-21110:21100-21110 ftp-server:latest
